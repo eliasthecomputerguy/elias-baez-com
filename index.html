@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Elias Baez | Cloud Systems Engineer</title>
+  <meta name="description" content="Resume site for Elias Baez, AWS Cloud Engineer." />
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:#101827;
+      --text:#e8eefc;
+      --muted:#a9b7d0;
+      --line:#22314d;
+      --chip:#17243b;
+      --accent:#66a3ff;
+      --accent2:#7ee787;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --max: 980px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    *{box-sizing:border-box}
+    html, body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--text);
+
+  background:
+    radial-gradient(1400px 900px at 10% 5%, rgba(102,163,255,.22), transparent 70%),
+    radial-gradient(1200px 900px at 90% 10%, rgba(126,231,135,.16), transparent 70%),
+    linear-gradient(180deg, #0b0f17 0%, #0b0f17 100%);
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 16px 56px}
+    .topbar{
+      display:flex; gap:12px; align-items:center; justify-content:space-between;
+      margin-bottom:18px;
+    }
+    .badge{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:10px 12px; border:1px solid var(--line); border-radius:999px;
+      background: rgba(16,24,39,.55);
+      box-shadow: 0 0 0 1px rgba(255,255,255,.02) inset;
+    }
+    .dot{width:10px; height:10px; border-radius:999px; background: linear-gradient(135deg, var(--accent), var(--accent2))}
+    .btns{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .btn{
+      border:1px solid var(--line);
+      background: rgba(16,24,39,.55);
+      color: var(--text);
+      padding:10px 12px;
+      border-radius:999px;
+      text-decoration:none;
+      display:inline-flex; gap:8px; align-items:center;
+      box-shadow: 0 0 0 1px rgba(255,255,255,.02) inset;
+      transition: transform .12s ease, border-color .12s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(102,163,255,.55)}
+    .btn svg{width:16px; height:16px; opacity:.9}
+
+    header.card{
+      background: linear-gradient(180deg, rgba(16,24,39,.92), rgba(16,24,39,.70));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .hero{
+      display:grid;
+      grid-template-columns: 1.4fr .6fr;
+      gap:18px;
+      align-items:start;
+    }
+    h1{
+      margin:0;
+      font-size: 34px;
+      letter-spacing:-.02em;
+      line-height:1.15;
+    }
+    .title{
+      margin-top:6px;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .summary{
+      margin-top:14px;
+      color: var(--text);
+      max-width: 72ch;
+    }
+    .meta{
+      display:flex; flex-direction:column; gap:8px;
+      padding:14px;
+      border:1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(11,15,23,.35);
+    }
+    .metaRow{
+      display:flex; justify-content:space-between; gap:12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .metaRow b{color: var(--text); font-weight:600}
+    .stack{
+      margin-top:16px;
+      display:flex; flex-wrap:wrap; gap:8px;
+    }
+    .chip{
+      display:inline-flex; align-items:center;
+      padding:6px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(23,36,59,.55);
+      color: var(--text);
+      font-size: 12px;
+      white-space:nowrap;
+    }
+
+    main{
+      margin-top:16px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+      align-items:start;
+    }
+
+    section.card{
+      background: linear-gradient(180deg, rgba(16,24,39,.80), rgba(16,24,39,.60));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow);
+    }
+
+    h2{
+      margin:0 0 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--muted);
+    }
+
+    .item{
+      padding:14px;
+      border:1px solid var(--line);
+      border-radius: 14px;
+      background: rgba(11,15,23,.28);
+    }
+    .item + .item{margin-top:12px}
+    .itemHead{
+      display:flex; gap:10px; justify-content:space-between; align-items:baseline;
+      flex-wrap:wrap;
+    }
+    .role{
+      font-weight:700;
+      font-size: 15px;
+    }
+    .company{
+      color: var(--muted);
+      font-size: 13px;
+      margin-top:2px;
+    }
+    .dates{
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      white-space:nowrap;
+    }
+
+    ul{margin:10px 0 0 18px; padding:0}
+    li{margin:6px 0; color: var(--text)}
+    .muted{color: var(--muted)}
+    .mono{font-family: var(--mono)}
+    .full{grid-column: 1 / -1}
+
+    footer{
+      margin-top:16px;
+      color: var(--muted);
+      font-size: 12px;
+      text-align:center;
+    }
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr}
+      main{grid-template-columns:1fr}
+      .btns{justify-content:flex-start}
+    }
+
+    @media print{
+      body{background:#fff; color:#000}
+      .btns,.badge{display:none !important}
+      header.card, section.card{box-shadow:none}
+      header.card, section.card{background:#fff; border:1px solid #ddd}
+      .chip{border:1px solid #ddd; background:#f5f5f5; color:#000}
+      .meta{background:#fff}
+      .item{background:#fff}
+      .muted{color:#333}
+      h2{color:#333}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="badge" aria-label="Status badge">
+        <span class="dot" aria-hidden="true"></span>
+        <span class="mono" style="font-size:12px; color:var(--muted)">Resume</span>
+      </div>
+
+      <div class="btns">
+        <a class="btn" href="#experience" title="Jump to experience">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12h14"></path>
+          </svg>
+          Experience
+        </a>
+        <a class="btn" href="#skills" title="Jump to skills">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 7h-9M20 12h-9M20 17h-9"></path><path d="M4 7h.01M4 12h.01M4 17h.01"></path>
+          </svg>
+          Skills
+        </a>
+        <button class="btn" onclick="window.print()" title="Print or save as PDF">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9V2h12v7"></path><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><path d="M6 14h12v8H6z"></path>
+          </svg>
+          Print
+        </button>
+      </div>
+    </div>
+
+    <header class="card">
+      <div class="hero">
+        <div>
+          <h1>Elias Baez</h1>
+          <div class="title">AWS Cloud Engineer</div>
+
+          <p class="summary">
+            Cloud Engineer with 7+ years of experience architecting scalable AWS cloud infrastructures,
+            deploying CI/CD pipelines, and supporting high-traffic web applications. Proven track record in improving
+            application performance, and reducing server costs. Skilled in ECS Fargate, Cloud Formation, Docker, Node.js, Code Pipeline, and security best practices.
+          </p>
+
+          <div class="stack" aria-label="Quick skill highlights">
+            <span class="chip">AWS</span>
+            <span class="chip">ECS Fargate</span>
+            <span class="chip">Cloud Formation</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Node.js Express</span>
+            <span class="chip">CI/CD CodePipeline</span>
+            <span class="chip">RDS Aurora MySQL</span>
+            <span class="chip">Cognito</span>
+            <span class="chip">IAM</span>
+            <span class="chip">Secrets Manager</span>
+            <span class="chip">PHP</span>
+          </div>
+        </div>
+
+        <div class="meta" aria-label="Key facts">
+          <div class="metaRow"><span>Current role</span><b>The Potter’s House of Dallas</b></div>
+          <div class="metaRow"><span>Role</span><b>AWS Cloud Engineer</b></div>
+          <div class="metaRow"><span>Experience</span><b>7+ years</b></div>
+          <div class="metaRow"><span>Focus</span><b>AWS</b></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card" id="skills">
+        <h2>Skills</h2>
+
+        <div class="item">
+          <div class="role">AWS</div>
+          <div class="muted">ECS, EC2, S3, CloudFront, RDS, Lambda, Cognito, IAM, Secrets Manager</div>
+        </div>
+
+        <div class="item">
+          <div class="role">DevOps and Tools</div>
+          <div class="muted">Docker, Git, CI CD (CodePipeline, CodeBuild), Linux (Ubuntu, Amazon Linux 2023)</div>
+        </div>
+
+        <div class="item">
+          <div class="role">Programming</div>
+          <div class="muted">Node.js (Express), PHP (WordPress, Laravel), ColdFusion, JavaScript, HTML, CSS</div>
+        </div>
+
+        <div class="item">
+          <div class="role">Databases</div>
+          <div class="muted">MySQL (Aurora), Microsoft SQL, MongoDB</div>
+        </div>
+
+        <div class="item">
+          <div class="role">Security</div>
+          <div class="muted">IAM Policies, Key Rotation, PCI Compliance, HIPAA Compliance</div>
+        </div>
+        <div class="item">
+          <div class="role">AI</div>
+          <div class="muted">Anything LLM</div>
+        </div>
+      </section>
+      <div>
+        <section class="card" id="education">
+          <h2>Education</h2>
+          <div class="item">
+            <div class="role">University of Texas, Arlington</div>
+            <div class="company">2011 to 2014</div>
+            <div class="muted">
+              No formal degree earned. Learned on the job.
+              Coursework: Programming Languages (Python, C), Object Oriented Programming, Algorithms and Data Structures
+            </div>
+          </div>
+        </section>
+        <section class="card" id="projects">
+          <h2>Personal Project</h2>
+          <div class="item">
+            <div class="role">Independent Project</div>
+            <div class="muted">
+              Developed a React MVC app with a Node.js REST API for crypto-currency risk management,
+              using JWT authentication, Express middleware, MongoDB models, and Docker containers.
+            </div>
+          </div>
+        </section>
+    </div>
+      <section class="card full" id="experience">
+        <h2>Experience</h2>
+
+        <div class="item">
+          <div class="itemHead">
+            <div>
+              <div class="role">Cloud Systems Engineer</div>
+              <div class="company">The Potter’s House of Dallas</div>
+            </div>
+            <div class="dates">Feb 2021 to Present</div>
+          </div>
+
+          <ul>
+            <li>Deployed Anything LLM inside our AWS environment and trained it with our internal SOPs.</li>
+            <li>Architected and deployed AWS based infrastructure for a Community Membership app under a 6 week deadline, achieving 100% uptime and supporting 30,000+ users.</li>
+            <li>Used AWS Secrets Manager for environment variable storage and key rotation.</li>
+            <li>Used AWS Cognito for end-user passwordless sign in.</li>
+            <li>Implemented strict IAM controls for application access to AWS services.</li>
+            <li>Integrated application with Hubspot for business observability and tracking.</li>
+            <li>Maintained uptime during launch and beyond using ECS Fargate clusters.</li>
+            <li>Deployed local Docker environments that mirror staging and production.</li>
+            <li>Migrated existing applications into ECS Fargate clusters using Docker containers.</li>
+            <li>Created CI CD CodePipelines to detect and deploy automatically on Git push.</li>
+            <li>Created scalable infrastructures for church streaming services used by over 30,000 members.</li>
+            <li>Led an AI team responsible for vetting and implementing AI company wide.</li>
+            <li>Patched security findings regularly.</li>
+            <li>Managed PCI compliant applications for taking payments.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="itemHead">
+            <div>
+              <div class="role">Full Stack Web Developer</div>
+              <div class="company">Great Dental Websites, Denver CO</div>
+            </div>
+            <div class="dates">Feb 2018 to Apr 2019</div>
+          </div>
+
+          <ul>
+            <li>Worked with Lucee CFML to maintain and develop features for a proprietary CMS used by 800+ dentistry offices.</li>
+            <li>Built Node.js scripts to pull from REST and SOAP APIs, process data, and insert into MySQL.</li>
+            <li>Migrated legacy infrastructure to a globally distributed AWS stack (S3, EC2, RDS, CloudFront), improving PageSpeed from 60 to 95 and reducing server response times by 35%.</li>
+            <li>Updated architecture toward Docker containers in ECS with CI CD CodePipeline.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="itemHead">
+            <div>
+              <div class="role">Full Stack Web Developer</div>
+              <div class="company">Management and Engineering Services, Longmont CO</div>
+            </div>
+            <div class="dates">Sept 2016 to Sept 2017</div>
+          </div>
+
+          <ul>
+            <li>Maintained and developed features in ColdFusion 10 and 2016 for a proprietary auditing system used by Johns Manville and National Park Service concessioners.</li>
+            <li>Built a front end mobile interface using HTML, CSS, and JavaScript for field use.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="itemHead">
+            <div>
+              <div class="role">Freelance WordPress Developer</div>
+              <div class="company">Remote</div>
+            </div>
+            <div class="dates">Jun 2014 to Aug 2016</div>
+          </div>
+
+          <ul>
+            <li>Proposed and developed custom WordPress plugins with accurate time estimates.</li>
+            <li>Used PHP to maintain in house ticketing and CMS web applications.</li>
+            <li>Used Bootstrap and JavaScript to implement AJAX requests without page refresh.</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <div class="itemHead">
+            <div>
+              <div class="role">Web Dev Student</div>
+              <div class="company">Administrative Information Management, UTA, Arlington TX</div>
+            </div>
+            <div class="dates">May 2012 to Apr 2014</div>
+          </div>
+
+          <ul>
+            <li>Coursework focused on programming languages, OOP, and algorithms and data structures.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div><a href="https://www.linkedin.com/in/elias-baez/">LinkedIn</a></div>
+    </footer>
+  </div>
+</body>
+</html>
+
