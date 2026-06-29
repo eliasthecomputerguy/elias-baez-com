@@ -4,158 +4,241 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Elias Baez | AWS Cloud Engineer</title>
-  <meta name="description" content="Resume site for Elias Baez, AWS Cloud Engineer." />
+  <meta name="description" content="Elias Baez, AWS Cloud Engineer with 10+ years architecting scalable AWS infrastructure, CI/CD pipelines, and private on-prem LLM systems. AWS Certified Solutions Architect Associate and Cloud Practitioner." />
+  <meta name="author" content="Elias Baez" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://elias-baez.com/" />
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Elias Baez | AWS Cloud Engineer" />
+  <meta property="og:description" content="AWS Cloud Engineer with 10+ years architecting scalable AWS infrastructure, CI/CD pipelines, and private on-prem LLM systems." />
+  <meta property="og:url" content="https://elias-baez.com/" />
+  <meta property="profile:first_name" content="Elias" />
+  <meta property="profile:last_name" content="Baez" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Elias Baez | AWS Cloud Engineer" />
+  <meta name="twitter:description" content="AWS Cloud Engineer with 10+ years architecting scalable AWS infrastructure, CI/CD pipelines, and private on-prem LLM systems." />
+
+  <!-- Structured data for machine extraction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Elias Baez",
+    "givenName": "Elias",
+    "familyName": "Baez",
+    "jobTitle": "AWS Cloud Engineer",
+    "description": "Cloud Engineer with 10+ years of experience architecting scalable AWS cloud infrastructures, deploying CI/CD pipelines, supporting high-traffic web applications, and standing up private on-prem LLM infrastructure.",
+    "url": "https://elias-baez.com/",
+    "sameAs": [
+      "https://www.linkedin.com/in/elias-baez/",
+      "https://www.credly.com/badges/42f8f950-4c99-4a77-a80c-9620b1267ae2/public_url",
+      "https://www.credly.com/badges/946abe9e-bc79-432d-a426-f5059c920236/public_url"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Arlington",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "worksFor": {
+      "@type": "Organization",
+      "name": "The Potter's House of Dallas"
+    },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "University of Texas at Arlington"
+    },
+    "knowsAbout": [
+      "Amazon Web Services", "AWS ECS", "AWS Fargate", "AWS CloudFormation", "Docker",
+      "CI/CD", "AWS CodePipeline", "AWS CodeBuild", "Amazon Cognito", "AWS IAM",
+      "AWS Secrets Manager", "Amazon CloudWatch", "AWS WAF", "Amazon Route 53",
+      "Amazon VPC", "Amazon EventBridge", "Amazon RDS", "Amazon Aurora MySQL",
+      "AWS Lambda", "Amazon S3", "Amazon CloudFront", "Node.js", "PHP", "JavaScript",
+      "Python", "React Native", "MongoDB", "Microsoft SQL Server", "Linux",
+      "LLM infrastructure", "LiteLLM", "LibreChat", "PCI Compliance", "HIPAA Compliance"
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "certification",
+        "name": "AWS Certified Solutions Architect – Associate",
+        "recognizedBy": { "@type": "Organization", "name": "Amazon Web Services" },
+        "url": "https://www.credly.com/badges/42f8f950-4c99-4a77-a80c-9620b1267ae2/public_url"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "certification",
+        "name": "AWS Certified Cloud Practitioner",
+        "recognizedBy": { "@type": "Organization", "name": "Amazon Web Services" },
+        "url": "https://www.credly.com/badges/946abe9e-bc79-432d-a426-f5059c920236/public_url"
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root{
-      --bg:#0b0f17;
-      --card:#101827;
-      --text:#e8eefc;
-      --muted:#a9b7d0;
-      --line:#22314d;
-      --chip:#17243b;
-      --accent:#66a3ff;
-      --accent2:#7ee787;
-      --shadow: 0 10px 30px rgba(0,0,0,.35);
-      --radius: 16px;
+      --bg:#0f1115;
+      --bg-2:#12151c;
+      --card:#161922;
+      --card-2:#1b1f29;
+      --text:#e8eaf0;
+      --muted:#9aa3b2;
+      --faint:#6b7382;
+      --line:#262b36;
+      --line-2:#2f3543;
+      --accent:#2dd4bf;
+      --accent-soft: rgba(45,212,191,.10);
+      --accent-line: rgba(45,212,191,.35);
+      --radius: 14px;
+      --radius-sm: 10px;
       --max: 980px;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     }
 
     *{box-sizing:border-box}
-    html, body {
-  min-height: 100%;
-}
+    html, body{min-height:100%}
 
-body {
-  margin: 0;
-  font-family: var(--sans);
-  color: var(--text);
+    body{
+      margin:0;
+      font-family: var(--sans);
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      line-height: 1.5;
+    }
 
-  background:
-    radial-gradient(1400px 900px at 10% 5%, rgba(102,163,255,.22), transparent 70%),
-    radial-gradient(1200px 900px at 90% 10%, rgba(126,231,135,.16), transparent 70%),
-    linear-gradient(180deg, #0b0f17 0%, #0b0f17 100%);
+    a{color: var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
 
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+    .wrap{max-width:var(--max); margin:0 auto; padding:32px 20px 64px}
 
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:28px 16px 56px}
     .topbar{
       display:flex; gap:12px; align-items:center; justify-content:space-between;
-      margin-bottom:18px;
+      margin-bottom:22px;
     }
     .badge{
-      display:inline-flex; gap:10px; align-items:center;
-      padding:10px 12px; border:1px solid var(--line); border-radius:999px;
-      background: rgba(16,24,39,.55);
-      box-shadow: 0 0 0 1px rgba(255,255,255,.02) inset;
+      display:inline-flex; gap:9px; align-items:center;
+      padding:8px 13px; border:1px solid var(--line); border-radius:999px;
+      background: var(--bg-2);
     }
-    .dot{width:10px; height:10px; border-radius:999px; background: linear-gradient(135deg, var(--accent), var(--accent2))}
-    .btns{display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end}
+    .dot{width:8px; height:8px; border-radius:999px; background: var(--accent); box-shadow:0 0 0 4px var(--accent-soft)}
+    .btns{display:flex; gap:9px; flex-wrap:wrap; justify-content:flex-end}
     .btn{
       border:1px solid var(--line);
-      background: rgba(16,24,39,.55);
+      background: var(--bg-2);
       color: var(--text);
-      padding:10px 12px;
+      padding:9px 14px;
       border-radius:999px;
-      text-decoration:none;
+      font-size:13px;
+      font-weight:500;
       display:inline-flex; gap:8px; align-items:center;
-      box-shadow: 0 0 0 1px rgba(255,255,255,.02) inset;
-      transition: transform .12s ease, border-color .12s ease;
+      transition: border-color .14s ease, color .14s ease, background .14s ease;
       cursor:pointer;
     }
-    .btn:hover{transform: translateY(-1px); border-color: rgba(102,163,255,.55)}
-    .btn svg{width:16px; height:16px; opacity:.9}
+    .btn:hover{border-color: var(--accent-line); color: var(--accent); background: var(--accent-soft); text-decoration:none}
+    .btn svg{width:15px; height:15px; opacity:.85}
 
     header.card{
-      background: linear-gradient(180deg, rgba(16,24,39,.92), rgba(16,24,39,.70));
+      background: var(--card);
       border:1px solid var(--line);
       border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: var(--shadow);
+      padding: 28px;
     }
     .hero{
       display:grid;
-      grid-template-columns: 1.4fr .6fr;
-      gap:18px;
+      grid-template-columns: 1.5fr .6fr;
+      gap:26px;
       align-items:start;
     }
     h1{
       margin:0;
-      font-size: 34px;
-      letter-spacing:-.02em;
-      line-height:1.15;
+      font-size: 38px;
+      font-weight: 700;
+      letter-spacing:-.025em;
+      line-height:1.1;
     }
     .title{
-      margin-top:6px;
+      margin-top:7px;
       font-size: 15px;
-      color: var(--muted);
+      font-weight:600;
+      color: var(--accent);
+      letter-spacing:.01em;
     }
     .summary{
-      margin-top:14px;
-      color: var(--text);
-      max-width: 72ch;
+      margin-top:16px;
+      color: var(--muted);
+      max-width: 64ch;
+      font-size:14.5px;
     }
     .meta{
-      display:flex; flex-direction:column; gap:8px;
-      padding:14px;
+      display:flex; flex-direction:column; gap:0;
+      padding:4px 16px;
       border:1px solid var(--line);
-      border-radius: 14px;
-      background: rgba(11,15,23,.35);
+      border-radius: var(--radius-sm);
+      background: var(--bg-2);
     }
     .metaRow{
-      display:flex; justify-content:space-between; gap:12px;
-      color: var(--muted);
-      font-size: 13px;
+      display:flex; justify-content:space-between; gap:12px; align-items:center;
+      color: var(--faint);
+      font-size: 12.5px;
+      padding:11px 0;
     }
-    .metaRow b{color: var(--text); font-weight:600}
+    .metaRow + .metaRow{border-top:1px solid var(--line)}
+    .metaRow b{color: var(--text); font-weight:600; text-align:right}
     .stack{
-      margin-top:16px;
+      margin-top:18px;
       display:flex; flex-wrap:wrap; gap:8px;
     }
     .chip{
       display:inline-flex; align-items:center;
-      padding:6px 10px;
+      padding:5px 11px;
       border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(23,36,59,.55);
-      color: var(--text);
+      border:1px solid var(--line-2);
+      background: transparent;
+      color: var(--muted);
       font-size: 12px;
+      font-weight:500;
       white-space:nowrap;
+      transition: border-color .14s ease, color .14s ease;
     }
+    .chip:hover{border-color: var(--accent-line); color: var(--text)}
 
     main{
-      margin-top:16px;
+      margin-top:18px;
       display:grid;
       grid-template-columns: 1fr 1fr;
-      gap:16px;
+      gap:18px;
       align-items:start;
     }
 
     section.card{
-      background: linear-gradient(180deg, rgba(16,24,39,.80), rgba(16,24,39,.60));
+      background: var(--card);
       border:1px solid var(--line);
       border-radius: var(--radius);
-      padding: 18px 18px 16px;
-      box-shadow: var(--shadow);
+      padding: 22px;
     }
 
     h2{
-      margin:0 0 10px;
-      font-size: 14px;
+      margin:0 0 16px;
+      font-size: 12px;
+      font-weight:700;
       text-transform: uppercase;
-      letter-spacing: .12em;
-      color: var(--muted);
+      letter-spacing: .16em;
+      color: var(--faint);
+      display:flex; align-items:center; gap:10px;
     }
+    h2::after{content:""; flex:1; height:1px; background: var(--line)}
 
     .item{
-      padding:14px;
+      padding:15px 16px;
       border:1px solid var(--line);
-      border-radius: 14px;
-      background: rgba(11,15,23,.28);
+      border-radius: var(--radius-sm);
+      background: var(--card-2);
     }
     .item + .item{margin-top:12px}
     .itemHead{
@@ -163,50 +246,77 @@ body {
       flex-wrap:wrap;
     }
     .role{
-      font-weight:700;
+      font-weight:600;
       font-size: 15px;
+      color: var(--text);
     }
     .company{
-      color: var(--muted);
+      color: var(--accent);
       font-size: 13px;
-      margin-top:2px;
+      font-weight:500;
+      margin-top:3px;
     }
     .dates{
-      color: var(--muted);
+      color: var(--faint);
       font-family: var(--mono);
-      font-size: 12px;
+      font-size: 11.5px;
       white-space:nowrap;
     }
 
-    ul{margin:10px 0 0 18px; padding:0}
-    li{margin:6px 0; color: var(--text)}
-    .muted{color: var(--muted)}
+    ul{margin:12px 0 0; padding:0; list-style:none}
+    li{
+      position:relative;
+      margin:7px 0;
+      padding-left:18px;
+      color: var(--muted);
+      font-size:14px;
+    }
+    li::before{
+      content:"";
+      position:absolute;
+      left:0; top:9px;
+      width:5px; height:5px;
+      border-radius:999px;
+      background: var(--accent);
+    }
+    .muted{color: var(--muted); font-size:14px; margin-top:4px}
     .mono{font-family: var(--mono)}
     .full{grid-column: 1 / -1}
 
+    .certitem{display:flex; gap:14px; align-items:center}
+    .badgelink{flex:0 0 auto; display:block; line-height:0}
+    .badge-img{width:72px; height:72px; display:block}
+
     footer{
-      margin-top:16px;
-      color: var(--muted);
-      font-size: 12px;
+      margin-top:24px;
+      color: var(--faint);
+      font-size: 12.5px;
       text-align:center;
     }
 
     @media (max-width: 900px){
-      .hero{grid-template-columns:1fr}
+      .wrap{padding:24px 16px 48px}
+      .hero{grid-template-columns:1fr; gap:22px}
       main{grid-template-columns:1fr}
       .btns{justify-content:flex-start}
+      h1{font-size:32px}
     }
 
     @media print{
       body{background:#fff; color:#000}
+      a{color:#000}
       .btns,.badge{display:none !important}
-      header.card, section.card{box-shadow:none}
       header.card, section.card{background:#fff; border:1px solid #ddd}
-      .chip{border:1px solid #ddd; background:#f5f5f5; color:#000}
+      .item{background:#fafafa; border:1px solid #e5e5e5}
+      .chip{border:1px solid #ddd; color:#000}
       .meta{background:#fff}
-      .item{background:#fff}
-      .muted{color:#333}
-      h2{color:#333}
+      .title,.company{color:#000}
+      .muted, li{color:#222}
+      h2{color:#444}
+      h2::after{background:#ddd}
+      li::before{background:#666}
+      .dot{box-shadow:none; background:#666}
+      .badge-img,.badgelink{display:none !important}
     }
   </style>
 </head>
@@ -248,15 +358,17 @@ body {
           <div class="title">AWS Cloud Engineer</div>
 
           <p class="summary">
-            Cloud Engineer with 7+ years of experience architecting scalable AWS cloud infrastructures,
+            Cloud Engineer with 10+ years of experience architecting scalable AWS cloud infrastructures,
             deploying CI/CD pipelines, and supporting high-traffic web applications. Proven track record in improving
-            application performance, and reducing server costs. Skilled in ECS Fargate, Cloud Formation, Docker, Node.js, Code Pipeline, and security best practices.
+            application performance, reducing server costs, and standing up private, on-prem LLM infrastructure for internal use.
+            Skilled in ECS Fargate, CloudFormation, Docker, Node.js, CodePipeline, AI/LLM tooling, and security best practices.
           </p>
 
           <div class="stack" aria-label="Quick skill highlights">
+            <span class="chip">AWS Certified</span>
             <span class="chip">AWS</span>
             <span class="chip">ECS Fargate</span>
-            <span class="chip">Cloud Formation</span>
+            <span class="chip">CloudFormation</span>
             <span class="chip">Docker</span>
             <span class="chip">Node.js Express</span>
             <span class="chip">CI/CD CodePipeline</span>
@@ -264,15 +376,17 @@ body {
             <span class="chip">Cognito</span>
             <span class="chip">IAM</span>
             <span class="chip">Secrets Manager</span>
+            <span class="chip">Private LLM / LiteLLM</span>
             <span class="chip">PHP</span>
           </div>
         </div>
 
         <div class="meta" aria-label="Key facts">
           <div class="metaRow"><span>Current role</span><b>The Potter’s House of Dallas</b></div>
-          <div class="metaRow"><span>Role</span><b>AWS Cloud Engineer</b></div>
-          <div class="metaRow"><span>Experience</span><b>7+ years</b></div>
-          <div class="metaRow"><span>Focus</span><b>AWS</b></div>
+          <div class="metaRow"><span>Title</span><b>AWS Cloud Engineer</b></div>
+          <div class="metaRow"><span>Location</span><b>Arlington, TX</b></div>
+          <div class="metaRow"><span>Experience</span><b>10+ years</b></div>
+          <div class="metaRow"><span>Certified</span><b>AWS SA Associate</b></div>
         </div>
       </div>
     </header>
@@ -283,7 +397,7 @@ body {
 
         <div class="item">
           <div class="role">AWS</div>
-          <div class="muted">ECS, EC2, S3, CloudFront, RDS, Lambda, Cognito, IAM, Secrets Manager</div>
+          <div class="muted">ECS, EC2, S3, CloudFront, RDS, Lambda, Cognito, IAM, Secrets Manager, CloudWatch, WAF, Route 53, VPC, EventBridge</div>
         </div>
 
         <div class="item">
@@ -306,29 +420,62 @@ body {
           <div class="muted">IAM Policies, Key Rotation, PCI Compliance, HIPAA Compliance</div>
         </div>
         <div class="item">
-          <div class="role">AI</div>
-          <div class="muted">Anything LLM</div>
+          <div class="role">AI / LLM</div>
+          <div class="muted">On-prem / private LLM hosting, LiteLLM (model routing), and LibreChat</div>
+        </div>
+        <div class="item">
+          <div class="role">AI-Augmented Engineering</div>
+          <div class="muted">
+            Full ownership of the stack: zero third-party npm dependencies to
+            minimize attack surface, and hands-on AWS deployments.
+          </div>
         </div>
       </section>
       <div>
+        <section class="card" id="certifications">
+          <h2>Certifications</h2>
+          <div class="item certitem">
+            <a class="badgelink" href="https://www.credly.com/badges/42f8f950-4c99-4a77-a80c-9620b1267ae2/public_url" target="_blank" rel="noopener">
+              <img class="badge-img" src="https://images.credly.com/size/340x340/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" alt="AWS Certified Solutions Architect – Associate badge" width="72" height="72" loading="lazy" />
+            </a>
+            <div>
+              <div class="role">AWS Certified Solutions Architect – Associate</div>
+              <div class="company">Amazon Web Services</div>
+              <div class="muted"><a href="https://www.credly.com/badges/42f8f950-4c99-4a77-a80c-9620b1267ae2/public_url" target="_blank" rel="noopener">Verify on Credly →</a></div>
+            </div>
+          </div>
+          <div class="item certitem">
+            <a class="badgelink" href="https://www.credly.com/badges/946abe9e-bc79-432d-a426-f5059c920236/public_url" target="_blank" rel="noopener">
+              <img class="badge-img" src="https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" alt="AWS Certified Cloud Practitioner badge" width="72" height="72" loading="lazy" />
+            </a>
+            <div>
+              <div class="role">AWS Certified Cloud Practitioner</div>
+              <div class="company">Amazon Web Services</div>
+              <div class="muted"><a href="https://www.credly.com/badges/946abe9e-bc79-432d-a426-f5059c920236/public_url" target="_blank" rel="noopener">Verify on Credly →</a></div>
+            </div>
+          </div>
+        </section>
         <section class="card" id="education">
           <h2>Education</h2>
           <div class="item">
-            <div class="role">University of Texas, Arlington</div>
+            <div class="role">University of Texas at Arlington</div>
             <div class="company">2011 to 2014</div>
             <div class="muted">
-              No formal degree earned. Learned on the job.
-              Coursework: Programming Languages (Python, C), Object Oriented Programming, Algorithms and Data Structures
+              Computer Science coursework, with a focus on programming languages,
+              object-oriented design, algorithms, and data structures.
             </div>
           </div>
         </section>
         <section class="card" id="projects">
           <h2>Personal Project</h2>
           <div class="item">
-            <div class="role">Independent Project</div>
+            <div class="role">Coinbase Futures Trading Bot</div>
+            <div class="company">Self-directed · Node.js · Python/MLX · React Native</div>
             <div class="muted">
-              Developed a React MVC app with a Node.js REST API for crypto-currency risk management,
-              using JWT authentication, Express middleware, MongoDB models, and Docker containers.
+              An algorithmic trading bot for Coinbase US futures with a custom signal engine
+              and a real-time dashboard. Machine learning runs natively on Apple Silicon
+              MLX for probability prediction, regime detection, and clustering. Backed by a
+              zero-dependency Node.js backend and walk-forward validation.
             </div>
           </div>
         </section>
@@ -346,20 +493,12 @@ body {
           </div>
 
           <ul>
-            <li>Deployed Anything LLM inside our AWS environment and trained it with our internal SOPs.</li>
-            <li>Architected and deployed AWS based infrastructure for a Community Membership app under a 6 week deadline, achieving 100% uptime and supporting 30,000+ users.</li>
-            <li>Used AWS Secrets Manager for environment variable storage and key rotation.</li>
-            <li>Used AWS Cognito for end-user passwordless sign in.</li>
-            <li>Implemented strict IAM controls for application access to AWS services.</li>
-            <li>Integrated application with Hubspot for business observability and tracking.</li>
-            <li>Maintained uptime during launch and beyond using ECS Fargate clusters.</li>
-            <li>Deployed local Docker environments that mirror staging and production.</li>
-            <li>Migrated existing applications into ECS Fargate clusters using Docker containers.</li>
-            <li>Created CI CD CodePipelines to detect and deploy automatically on Git push.</li>
-            <li>Created scalable infrastructures for church streaming services used by over 30,000 members.</li>
-            <li>Led an AI team responsible for vetting and implementing AI company wide.</li>
-            <li>Patched security findings regularly.</li>
-            <li>Managed PCI compliant applications for taking payments.</li>
+            <li>Led the company-wide AI initiative, standing up private, on-prem LLM infrastructure with LiteLLM for model routing and LibreChat as the employee-facing interface, and leading the team that vetted and rolled out AI across the organization.</li>
+            <li>Architected and deployed the AWS infrastructure for a community membership platform under a 6 week deadline, launching to 30,000+ users with 100% uptime.</li>
+            <li>Migrated applications onto containerized ECS Fargate clusters with Docker, automating build and deploy on every Git push through CI/CD CodePipelines.</li>
+            <li>Designed secure, scalable AWS networking with VPC, Route 53, and AWS WAF, backed by CloudWatch monitoring and EventBridge-driven automation.</li>
+            <li>Hardened applications with strict IAM policies, Secrets Manager key rotation, and Cognito passwordless authentication, maintaining PCI compliance for payments and member data.</li>
+            <li>Ran production data on RDS Aurora MySQL and built supporting services across ECS, Lambda, S3, and CloudFront.</li>
           </ul>
         </div>
 
@@ -377,6 +516,7 @@ body {
             <li>Built Node.js scripts to pull from REST and SOAP APIs, process data, and insert into MySQL.</li>
             <li>Migrated legacy infrastructure to a globally distributed AWS stack (S3, EC2, RDS, CloudFront), improving PageSpeed from 60 to 95 and reducing server response times by 35%.</li>
             <li>Updated architecture toward Docker containers in ECS with CI CD CodePipeline.</li>
+            <li>Maintained HIPAA compliance across applications handling patient data for 800+ dental practices.</li>
           </ul>
         </div>
 
@@ -432,4 +572,3 @@ body {
   </div>
 </body>
 </html>
-

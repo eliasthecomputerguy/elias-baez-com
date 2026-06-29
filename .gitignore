@@ -1,0 +1,8 @@
+# The repo auto-deploys to S3 via CodePipeline, which publishes whatever is tracked.
+# Keep the deploy minimal: the site (index.html) plus repo docs (README.md) and this file.
+# Strategy: ignore everything, then allow back only the files that belong in the repo.
+
+*
+!index.html
+!.gitignore
+!README.md
